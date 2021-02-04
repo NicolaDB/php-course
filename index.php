@@ -25,6 +25,19 @@
         echo "<br>".$key;
       }
     }
+    //calculate an immaginary tax, totally disconnected from the previous exercize
+    //$amount = 800;
+    //$taxrate = 0.0825;
+    //$addedtax = $amount*$taxrate;
+    //echo "<br>";
+    //echo $addedtax;
+
+    function tax_calc($amount,$tax){
+      $calculate_tax = $amount*$tax;
+      $amount = round($amount+$calculate_tax,2);
+      return $amount;
+    }
+    echo tax_calc(750,0.223); //you should get the result now
      ?>
   </body>
 </html>
